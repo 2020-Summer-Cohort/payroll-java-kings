@@ -9,10 +9,7 @@ Contains all PayrollEmployee fields and methods
 
 public class PayrollHourlyExample extends PayrollEmployee {
 
-    private int employeeId;
-    private String firstName;
-    private String lastName;
-    private double paycheckTotal;
+
     private int hoursWorked;
     private double hourlyRate;
 
