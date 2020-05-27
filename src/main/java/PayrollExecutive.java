@@ -9,7 +9,6 @@ Contains all PayrollEmployee fields and methods
 public class PayrollExecutive extends PayrollEmployee implements Insurable{
     private double insuranceCost;
     double payPeriodEarnings;
-    private String lastName;
     private double paycheckTotal;
 
     public PayrollExecutive(int employeeId, String firstName, String lastName, double paycheckTotal, double payPeriodEarnings, double insuranceCost) {
