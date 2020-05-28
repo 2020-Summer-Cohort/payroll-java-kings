@@ -18,5 +18,7 @@ public void calculatePay(double companyBonus){
         employee.calculateOwnPay(companyBonus);
 
     }
-
+public void addEmployee(PayrollEmployee employee){
+    myCompanyRoster.put(employee.getEmployeeId(),employee);
+}
 }

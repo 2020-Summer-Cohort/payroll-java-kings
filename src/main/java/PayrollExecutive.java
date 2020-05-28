@@ -11,7 +11,7 @@ public class PayrollExecutive extends PayrollEmployee implements Insurable, Bonu
     double payPeriodEarnings;
     private double paycheckTotal;
 
-    public PayrollExecutive(int employeeId, String firstName, String lastName, double paycheckTotal, double payPeriodEarnings, double insuranceCost) {
+    public PayrollExecutive(int employeeId, String firstName, String lastName, double paycheckTotal) {
         super(employeeId, firstName, lastName, paycheckTotal);
 
         this.employeeId = employeeId;

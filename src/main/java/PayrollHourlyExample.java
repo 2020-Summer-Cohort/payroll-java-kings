@@ -13,7 +13,7 @@ public class PayrollHourlyExample extends PayrollEmployee {
     private int hoursWorked;
     private double hourlyRate;
 
-    public PayrollHourlyExample(int employeeId, String firstName, String lastName, double paycheckTotal, int hoursWorked, double hourlyRate) {
+    public PayrollHourlyExample(int employeeId, String firstName, String lastName, double paycheckTotal) {
         super(employeeId, firstName, lastName, paycheckTotal);
 
         this.employeeId = employeeId;
