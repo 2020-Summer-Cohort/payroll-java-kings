@@ -6,7 +6,7 @@ Contains all PayrollEmployee fields and methods
         double payPeriodEarnings of 20,000
 */
 
-public class PayrollExecutive extends PayrollEmployee implements Insurable{
+public class PayrollExecutive extends PayrollEmployee implements Insurable, Bonus{
     private double insuranceCost;
     double payPeriodEarnings;
     private double paycheckTotal;
@@ -22,19 +22,15 @@ public class PayrollExecutive extends PayrollEmployee implements Insurable{
         this.insuranceCost = 10.00;
     }
 
-    @Override
-    public double getPaycheckTotal() {
-        return paycheckTotal;
-    }
-
-    @Override
-    public double setPaycheckTotal(double paycheckTotal) {
-        this.paycheckTotal = paycheckTotal;
-        return paycheckTotal;
-    }
 
     @Override
     public void payInsurance() {
-        setPaycheckTotal(payPeriodEarnings - insuranceCost);
+        setPaycheckTotal(paycheckTotal - insuranceCost);
+    }
+
+
+    @Override
+    public void receivesABonus(double companyBonus) {
+        setPaycheckTotal(paycheckTotal + (3*companyBonus));
     }
 }

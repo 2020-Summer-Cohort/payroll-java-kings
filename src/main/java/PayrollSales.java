@@ -13,15 +13,6 @@ public class PayrollSales extends PayrollEmployee implements Bonus{
         this.payPeriodEarnings = 3000.00;
         this.paycheckTotal = paycheckTotal;
     }
-    @Override
-    public double getPaycheckTotal(){
-        return paycheckTotal;
-    }
-    @Override
-    public double setPaycheckTotal(double paycheckTotal){
-        this.paycheckTotal = paycheckTotal;
-        return paycheckTotal;
-    }
 
 
     public double setSalesCommission(double salesCommission) {
@@ -39,10 +30,10 @@ public class PayrollSales extends PayrollEmployee implements Bonus{
         return salesCommission;
     }
 
+
     @Override
-    public void receivesABonus() {
-
-
+    public void receivesABonus(double companyBonus) {
+    setPaycheckTotal(paycheckTotal+companyBonus);
     }
 }
 

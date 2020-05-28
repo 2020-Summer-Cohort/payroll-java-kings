@@ -1,3 +1,3 @@
 public interface Insurable {
-    public void payInsurance();
+     void payInsurance();
 }

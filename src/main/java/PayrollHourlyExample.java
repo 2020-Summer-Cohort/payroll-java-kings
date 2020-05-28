@@ -36,24 +36,6 @@ public class PayrollHourlyExample extends PayrollEmployee {
         return hourlyRate;
     }
 
-    @Override
-    public double getPaycheckTotal() {
-      //  double newPaycheckTotal = getHoursWorked() * getHourlyRate();
-        return paycheckTotal;
-    }
 
-    @Override
-    public String getLastName() {
-        return lastName;
-    }
 
-    @Override
-    public String getFirstName() {
-        return firstName;
-    }
-
-    @Override
-    public int getEmployeeId() {
-        return employeeId;
-    }
 }

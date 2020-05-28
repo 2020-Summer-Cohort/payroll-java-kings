@@ -1,4 +1,4 @@
 public interface Bonus {
-    void receivesABonus();
+    void receivesABonus(double companyBonus);
 
 }
