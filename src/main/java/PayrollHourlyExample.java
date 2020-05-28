@@ -37,5 +37,8 @@ public class PayrollHourlyExample extends PayrollEmployee {
     }
 
 
-
+    @Override
+    public void calculateOwnPay(double companyBonus) {
+        setPaycheckTotal(getHoursWorked()*hourlyRate);
+    }
 }

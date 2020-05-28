@@ -1,3 +1,12 @@
+/*PayrollSales
+Contains all PayrollEmployee fields and methods
+Receives bonus (receiveBonus method)
+No insurance
+Additional fields:
+double sales commission (with an accompanying method to set the amount)
+double payPeriodEarnings of 3,000.00
+*/
+
 public class PayrollSales extends PayrollEmployee implements Bonus{
     private double payPeriodEarnings;
     public double salesCommission;
@@ -34,6 +43,12 @@ public class PayrollSales extends PayrollEmployee implements Bonus{
     @Override
     public void receivesABonus(double companyBonus) {
     setPaycheckTotal(paycheckTotal+companyBonus);
+    }
+
+    @Override
+    public void calculateOwnPay(double companyBonus) {
+        setPaycheckTotal(payPeriodEarnings+salesCommission);
+        receivesABonus(companyBonus);
     }
 }
 

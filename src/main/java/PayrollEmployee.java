@@ -1,4 +1,4 @@
-public abstract  class PayrollEmployee {
+public abstract  class PayrollEmployee implements CalculatablePay {
 
     int employeeId;
     String firstName;

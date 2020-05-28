@@ -32,12 +32,19 @@ public class PayrollDeveloper extends PayrollEmployee implements Insurable, Bonu
 
     @Override
     public void payInsurance() {
-        setPaycheckTotal(payPeriodEarnings-insuranceCost);
+        setPaycheckTotal(paycheckTotal-insuranceCost);
     }
 
     @Override
     public void receivesABonus(double companyBonus) {
-    setPaycheckTotal(payPeriodEarnings+companyBonus);
+    setPaycheckTotal(paycheckTotal+companyBonus);
+    }
+
+    @Override
+    public void calculateOwnPay(double companyBonus) {
+        setPaycheckTotal(payPeriodEarnings);
+        receivesABonus(companyBonus);
+        payInsurance();
     }
 }
 
